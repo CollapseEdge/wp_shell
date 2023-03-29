@@ -10,3 +10,5 @@ wget -N https://raw.githubusercontent.com/CollapseEdge/wp_shell/main/main.sh && 
 最后按照指引即可完成wordpress的安装
 > 本程序适合没有建站基础的小白使用，大佬请回避
 ---
+## license
+MIT license
