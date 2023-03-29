@@ -30,7 +30,7 @@ case $result in
 		wget https://raw.githubusercontent.com/CollapseEdge/wp_shell/main/docker-compose.yml
         systemctl start docker.service
         systemctl enable docker
-        docker-compose -f docker-compose.wordpress.yml up -d
+        docker-compose -f docker-compose.yml up -d
 		echo "安装完成!"
 		echo "请访问 http://`curl -s ident.me`/wp-admin/install.php"
 		echo "并按照指引完成安装"
