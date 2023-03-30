@@ -31,6 +31,7 @@ case $result in
         systemctl start docker.service
         systemctl enable docker
         docker-compose -f docker-compose.yml up -d
+	rm -f docker-compose.yml
 		echo "安装完成!"
 		echo "请访问 http://`curl -s ident.me`/wp-admin/install.php"
 		echo "并按照指引完成安装"
