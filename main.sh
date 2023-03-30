@@ -34,7 +34,7 @@ case $result in
         systemctl enable docker
         docker-compose -f docker-compose.yml up -d
 	rm -f docker-compose.yml
-		echo ----安装完成-----  &&  $SETCOLOR_SUCCESS
+		echo -e "\033[32m ---安装成功--- \033[0m" 
 		echo "请访问 http://`curl -s ident.me`/wp-admin/install.php"
 		echo "并按照指引完成安装"
 		echo "如果访问之后出现安装错误的提示,请强制刷新网页"
