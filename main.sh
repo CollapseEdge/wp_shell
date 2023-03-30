@@ -35,6 +35,7 @@ case $result in
 		echo "安装完成!"
 		echo "请访问 http://`curl -s ident.me`/wp-admin/install.php"
 		echo "并按照指引完成安装"
+		echo "如果访问之后出现安装错误的提示,请强制刷新网页"
 		;;
 	[nN][oO]|[nN])
 		echo "no"
