@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "欢迎使用wordpress一键安装脚本"
-echo "============================="
-echo "|@author: CollapseEdge      |"
-echo "|@GITHUB:CollapseEdge       |"
-echo "|@copyight:2023             |"
-echo "============================="
+echo "======================================"
+echo "|Author: CollapseEdge                |"
+echo "|Email: collapse_edge@outlook.com    |"
+echo "|Description: 一键安装wordpress脚本   |"
+echo "======================================"
 echo "正在进行系统检测..."
 if [[ $EUID -ne 0 ]];then
 	echo "请以root账户运行脚本"
