@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SETCOLOR_SUCCESS="echo -en \\033[1;32m"
+
 echo "欢迎使用wordpress一键安装脚本"
 echo "======================================"
 echo "|Author: CollapseEdge                |"
@@ -32,7 +34,7 @@ case $result in
         systemctl enable docker
         docker-compose -f docker-compose.yml up -d
 	rm -f docker-compose.yml
-		echo "安装完成!"
+		echo ----安装完成-----  &&  $SETCOLOR_SUCCESS
 		echo "请访问 http://`curl -s ident.me`/wp-admin/install.php"
 		echo "并按照指引完成安装"
 		echo "如果访问之后出现安装错误的提示,请强制刷新网页"
