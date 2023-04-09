@@ -27,7 +27,7 @@ case $result in
         systemctl start docker.service
         systemctl enable docker
 	wget https://raw.githubusercontent.com/CollapseEdge/wp_shell/main/upload.ini
-        docker run --name wordpress --link db:mysql -p 32768:80 -e WORDPRESS_DB_HOST=mysql:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=root -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_TABLE_PREFIX=wp_ -v /home/wordpress/upload.ini:/usr/local/etc/php/conf.d/uploads.ini -d wordpress
+        docker run --name wordpress --link db:mysql -p 80:80 -e WORDPRESS_DB_HOST=mysql:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=root -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_TABLE_PREFIX=wp_ -v /home/wordpress/upload.ini:/usr/local/etc/php/conf.d/uploads.ini -d wordpress
         rm -f upload.ini
 	echo -e "\033[32m ---安装成功--- \033[0m" 
 	echo "请访问 http://`curl -s ident.me`/wp-admin/install.php"
