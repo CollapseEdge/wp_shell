@@ -22,6 +22,7 @@ services:
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
        WORDPRESS_DB_NAME: wordpress
+     volumes:
+       - ./upload.ini:/usr/local/etc/php/conf.d/uploads.ini
 volumes:
-    - ./upload.ini:/usr/local/etc/php/conf.d/uploads.ini
-    db_data: {}
+   db_data: {}
